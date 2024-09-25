@@ -5,7 +5,7 @@ using namespace std;
 
 //Classe livre
 //Attributs : titre, auteur, annee, nb_pages
-//Méthodes : Constructeur, Affiche
+//Méthodes : Constructeur, Affiche, getTitre
 class Livre{
 private:
     string titre;
