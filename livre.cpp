@@ -4,7 +4,14 @@
 
 using namespace std;
 
-Livre::Livre(string t, string a, int an, int nb) {
+Livre::Livre() {
+    titre = "";
+    auteur = "";
+    annee = 0;
+    nb_pages = 0;
+}
+
+void Livre::setLivre(string t, string a, int an, int nb) {
     titre = t;
     auteur = a;
     annee = an;

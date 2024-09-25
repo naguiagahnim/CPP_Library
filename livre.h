@@ -14,7 +14,8 @@ private:
     int nb_pages;
 
 public:
-    Livre(string, string, int, int);
+    Livre();
+    void setLivre(string,string, int, int);
     void Affiche();
     string getTitre();
 
