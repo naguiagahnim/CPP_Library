@@ -58,7 +58,19 @@ int main() {
         }
     }
     else if(choix==3) {
-
+        //Supprimer un livre
+        string titre;
+        cout<<"Entrez le titre du livre à supprimer : ";
+        cin>>titre;
+        for(int i=0;i<sizeof(bibliotheque) / sizeof(bibliotheque[0]);i++) {
+            if(bibliotheque[i].getTitre()==titre) {
+                for(int j=i;j<sizeof(bibliotheque) / sizeof(bibliotheque[0])-1;j++) {
+                    bibliotheque[j] = bibliotheque[j+1];
+                }
+                bibliotheque_len--;
+                break;
+            }
+        }
     }
     else if(choix==4) {
 
