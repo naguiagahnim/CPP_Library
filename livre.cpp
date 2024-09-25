@@ -18,14 +18,14 @@ void Livre::setLivre(string t, string a, int an, int nb) {
     nb_pages = nb;
 }
 
-void Livre::Affiche() {
+void Livre::Affiche() const{
     cout<<"Titre : "<<titre<<endl;
     cout<<"Auteur : "<<auteur<<endl;
     cout<<"Annee : "<<annee<<endl;
     cout<<"Nombre de pages : "<<nb_pages<<endl;
 }
 
-string Livre::getTitre() {
+string Livre::getTitre() const{
     return titre;
 }
 

@@ -8,4 +8,6 @@ add_executable(TP1 module.cpp
         outils.h
         livre.h
         livre.cpp
+        bibliotheque.cpp
+        bibliotheque.h
 )

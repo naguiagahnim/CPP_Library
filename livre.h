@@ -16,8 +16,8 @@ private:
 public:
     Livre();
     void setLivre(string,string, int, int);
-    void Affiche();
-    string getTitre();
+    void Affiche() const;
+    string getTitre() const;
 
 };
 
