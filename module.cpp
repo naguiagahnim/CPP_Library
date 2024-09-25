@@ -14,5 +14,3 @@ int sommeR(int n)
         return n+sommeR(n-1);
     }
 }
-
-

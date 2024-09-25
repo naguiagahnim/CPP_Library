@@ -6,4 +6,5 @@
 //Sortie : la somme des n premiers entiers, un entier
 int sommeR(int n);
 
+
 #endif //OUTILS_H

@@ -1,5 +1,7 @@
 #include <iostream>
-#include "outils.h"
+#include <string>
+#include "livre.h"
+
 
 using namespace std;
 
