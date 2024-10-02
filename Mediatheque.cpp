@@ -1,9 +1,9 @@
-#include "bibliotheque.h"
+#include "Mediatheque.h"
 #include <iostream>
 
-Bibliotheque::Bibliotheque() : nbLivres(0) {}
+Mediatheque::Mediatheque() : nbLivres(0) {}
 
-void Bibliotheque::ajouterLivre(const Livre& livre) {
+void Mediatheque::ajouterLivre(const Livre& livre) {
     if (nbLivres < 100) {
         livres[nbLivres++] = livre;
     } else {
@@ -11,7 +11,7 @@ void Bibliotheque::ajouterLivre(const Livre& livre) {
     }
 }
 
-void Bibliotheque::supprimerLivre(const std::string& titre) {
+void Mediatheque::supprimerLivre(const std::string& titre) {
     for (int i = 0; i < nbLivres; ++i) {
         if (livres[i].getTitre() == titre) {
             for (int j = i; j < nbLivres - 1; ++j) {
@@ -23,14 +23,14 @@ void Bibliotheque::supprimerLivre(const std::string& titre) {
     }
 }
 
-void Bibliotheque::afficherLivres() const {
+void Mediatheque::afficherLivres() const {
     for (int i = 0; i < nbLivres; ++i) {
         std::cout << "------------------------------------------------------" << std::endl;
         livres[i].Affiche();
     }
 }
 
-void Bibliotheque::rechercherLivre(const std::string& titre) const {
+void Mediatheque::rechercherLivre(const std::string& titre) const {
     for (int i = 0; i < nbLivres; ++i) {
         if (livres[i].getTitre() == titre) {
             livres[i].Affiche();

@@ -1,19 +1,19 @@
-#ifndef BIBLIOTHEQUE_H
-#define BIBLIOTHEQUE_H
+#ifndef MEDIATHEQUE_H
+#define MEDIATHEQUE_H
 
-#include "livre.h"
+#include "Livre.h"
 
-class Bibliotheque {
+class Mediatheque {
 private:
     Livre livres[100];
     int nbLivres;
 
 public:
-    Bibliotheque();
+    Mediatheque();
     void ajouterLivre(const Livre&);
     void supprimerLivre(const string&);
     void afficherLivres() const;
     void rechercherLivre(const string&) const;
 };
 
-#endif // BIBLIOTHEQUE_H
+#endif // MEDIATHEQUE_H

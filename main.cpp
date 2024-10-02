@@ -1,19 +1,18 @@
 #include <iostream>
 #include <string>
-#include "livre.h"
-#include "bibliotheque.h"
+#include "Mediatheque.h"
 
 using namespace std;
 
 int main() {
     // Données de test
     Livre l1;
-    l1.setLivre("Les Miserables", "Victor Hugo", 1862, 1225);
+    l1.setLivre("Les Miserables", "Victor Hugo", 1862, 1225, "Livre soupi");
     Livre l2;
-    l2.setLivre("Le Petit Prince", "Antoine de Saint-Exupery", 1943, 93);
+    l2.setLivre("Le Petit Prince", "Antoine de Saint-Exupery", 1943, 93, "Livre cool");
 
     // Bibliothèque
-    Bibliotheque bibliotheque;
+    Mediatheque bibliotheque;
     bibliotheque.ajouterLivre(l1);
     bibliotheque.ajouterLivre(l2);
 

@@ -8,6 +8,16 @@ add_executable(TP1 module.cpp
         outils.h
         livre.h
         livre.cpp
-        bibliotheque.cpp
-        bibliotheque.h
+        Mediatheque.cpp
+        Mediatheque.h
+        Media.h
+        Media.cpp
+        CD.cpp
+        CD.h
+        DVD.cpp
+        DVD.h
+        BluRay.cpp
+        BluRay.h
+        Vinyle.cpp
+        Vinyle.h
 )

@@ -1,22 +1,20 @@
 #ifndef LIVRE_H
 #define LIVRE_H
 #include <string>
+#include "Media.h"
 using namespace std;
 
 //Classe livre
 //Attributs : titre, auteur, annee, nb_pages
 //Méthodes : Constructeur, Affiche, getTitre
-class Livre{
+class Livre : public Media {
 private:
-    string titre;
-    string auteur;
-    int annee;
     int nb_pages;
 
 public:
     Livre();
-    void setLivre(string,string, int, int);
-    void Affiche() const;
+    void setLivre(string, string, int, int, string);
+    void affiche() const;
     string getTitre() const;
 
 };

@@ -1,26 +1,24 @@
 #include <iostream>
 #include <string>
-#include "livre.h"
+#include "Livre.h"
 
 using namespace std;
 
 Livre::Livre() {
-    titre = "";
-    auteur = "";
-    annee = 0;
     nb_pages = 0;
 }
 
-void Livre::setLivre(string t, string a, int an, int nb) {
+void Livre::setLivre(string t, string c, int a, int nbp, string g) {
     titre = t;
-    auteur = a;
-    annee = an;
-    nb_pages = nb;
+    createur = c;
+    annee = a;
+    nb_pages = nbp;
+    genre = g;
 }
 
-void Livre::Affiche() const{
+void Livre::affiche() const{
     cout<<"Titre : "<<titre<<endl;
-    cout<<"Auteur : "<<auteur<<endl;
+    cout<<"Auteur : "<<createur<<endl;
     cout<<"Annee : "<<annee<<endl;
     cout<<"Nombre de pages : "<<nb_pages<<endl;
 }
