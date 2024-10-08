@@ -16,7 +16,7 @@ public:
     int getNbTours() const;
     int getNbPistes() const;
     void setVinyle(string, string, int, int, string, int, int, int, string);
-    void afficherVinyle() const;
+    void afficher() const override;
     string getMaisonDisque() const;
 };
 

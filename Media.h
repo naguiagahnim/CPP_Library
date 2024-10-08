@@ -21,6 +21,8 @@ public:
     int getAnnee() const;
     int getPrix() const;
     string getGenre() const;
+    virtual ~Media() {}
+    virtual void afficher() const = 0;
 };
 
 

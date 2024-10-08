@@ -13,8 +13,8 @@ private:
 public:
     DVD();
     int getDuree();
-    void setDVD(string, string, int, int, string);
-    void afficherDVD();
+    void setDVD(string, string, int, int, int, string);
+    void afficher() const override;
 
 };
 

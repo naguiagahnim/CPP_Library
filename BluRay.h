@@ -13,7 +13,7 @@ public:
     BluRay();
     void setBluRay(string, string, int, int, string, int);
     int getDuree() const;
-    void afficherBluRay() const;
+    void afficher() const override;
 };
 
 

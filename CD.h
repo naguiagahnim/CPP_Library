@@ -14,7 +14,7 @@ private:
 
 public:
     CD();
-    void afficheCd();
+    void afficher() const override;;
     int getDuree();
     int getnbTitre();
     string getMaisonDisque();

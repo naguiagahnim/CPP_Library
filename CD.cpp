@@ -10,7 +10,7 @@ CD::CD() {
     maisonDisque = "";
 }
 
-void CD::afficheCd(){
+void CD::afficher() const{
     cout<<"Titre : "<<titre<<endl;
     cout<<"Auteur : "<<createur<<endl;
     cout<<"Annee : "<<annee<<endl;

@@ -39,7 +39,7 @@ string Vinyle::getMaisonDisque() const {
     return maisonDisque;
 }
 
-void Vinyle::afficherVinyle() const {
+void Vinyle::afficher() const {
     cout << "Titre : " << titre << endl;
     cout << "Createur : " << createur << endl;
     cout << "Annee : " << annee << endl;

@@ -22,7 +22,7 @@ int BluRay::getDuree() const {
     return duree;
 }
 
-void BluRay::afficherBluRay() const {
+void BluRay::afficher() const {
     cout << "Titre : " << titre << endl;
     cout << "Createur : " << createur << endl;
     cout << "Annee : " << annee << endl;

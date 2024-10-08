@@ -16,7 +16,7 @@ void Livre::setLivre(string t, string c, int a, int nbp, string g) {
     genre = g;
 }
 
-void Livre::affiche() const{
+void Livre::afficher() const{
     cout<<"Titre : "<<titre<<endl;
     cout<<"Auteur : "<<createur<<endl;
     cout<<"Annee : "<<annee<<endl;

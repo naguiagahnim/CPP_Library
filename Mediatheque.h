@@ -1,19 +1,21 @@
 #ifndef MEDIATHEQUE_H
 #define MEDIATHEQUE_H
 
-#include "Livre.h"
+#include "Media.h"
+#include <vector>
+#include <string>
 
 class Mediatheque {
 private:
-    Livre livres[100];
-    int nbLivres;
+    std::vector<Media*> medias;
 
 public:
     Mediatheque();
-    void ajouterLivre(const Livre&);
-    void supprimerLivre(const string&);
-    void afficherLivres() const;
-    void rechercherLivre(const string&) const;
+    ~Mediatheque();
+    void ajouterMedia(Media* media);
+    void supprimerMedia(const std::string& titre);
+    void afficherMedias() const;
+    void rechercherMedia(const std::string& titre) const;
 };
 
 #endif // MEDIATHEQUE_H

@@ -1,41 +1,41 @@
 #include "Mediatheque.h"
 #include <iostream>
 
-Mediatheque::Mediatheque() : nbLivres(0) {}
+Mediatheque::Mediatheque() {}
 
-void Mediatheque::ajouterLivre(const Livre& livre) {
-    if (nbLivres < 100) {
-        livres[nbLivres++] = livre;
-    } else {
-        std::cout << "La bibliothèque est pleine" << std::endl;
+Mediatheque::~Mediatheque() {
+    for (Media* media : medias) {
+        delete media;
     }
 }
 
-void Mediatheque::supprimerLivre(const std::string& titre) {
-    for (int i = 0; i < nbLivres; ++i) {
-        if (livres[i].getTitre() == titre) {
-            for (int j = i; j < nbLivres - 1; ++j) {
-                livres[j] = livres[j + 1];
-            }
-            --nbLivres;
+void Mediatheque::ajouterMedia(Media* media) {
+    medias.push_back(media);
+}
+
+void Mediatheque::supprimerMedia(const std::string& titre) {
+    for (auto it = medias.begin(); it != medias.end(); ++it) {
+        if ((*it)->getTitre() == titre) {
+            delete *it;
+            medias.erase(it);
             break;
         }
     }
 }
 
-void Mediatheque::afficherLivres() const {
-    for (int i = 0; i < nbLivres; ++i) {
+void Mediatheque::afficherMedias() const {
+    for (const Media* media : medias) {
         std::cout << "------------------------------------------------------" << std::endl;
-        livres[i].Affiche();
+        media->afficher();
     }
 }
 
-void Mediatheque::rechercherLivre(const std::string& titre) const {
-    for (int i = 0; i < nbLivres; ++i) {
-        if (livres[i].getTitre() == titre) {
-            livres[i].Affiche();
+void Mediatheque::rechercherMedia(const std::string& titre) const {
+    for (const Media* media : medias) {
+        if (media->getTitre() == titre) {
+            media->afficher();
             return;
         }
     }
-    std::cout << "Livre non trouvé" << std::endl;
+    std::cout << "Media non trouvé" << std::endl;
 }

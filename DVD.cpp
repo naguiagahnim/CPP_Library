@@ -12,15 +12,16 @@ int DVD::getDuree() {
     return duree;
 }
 
-void DVD::setDVD(string t, string c, int a, int p, string g) {
+void DVD::setDVD(string t, string c, int a, int p, int d, string g) {
     titre = t;
     createur = c;
     annee = a;
     prix = p;
+    duree = d;
     genre = g;
 }
 
-void DVD::afficherDVD() {
+void DVD::afficher() const{
     cout << "Titre : " << titre << endl;
     cout << "Createur : " << createur << endl;
     cout << "Annee : " << annee << endl;
